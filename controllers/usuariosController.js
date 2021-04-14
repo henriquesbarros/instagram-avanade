@@ -8,9 +8,9 @@ const usuariosController = {
     create: async (req, res) => {
         const { nome, email, senha } = req.body
         let novoUsuario = await Usuario.create({
-            nome: nome,
-            email: email,
-            senha: senha
+            nome,
+            email,
+            senha
         })
         return res.json(novoUsuario)
     },
@@ -18,12 +18,10 @@ const usuariosController = {
         const { id } = req.params
         const { email } = req.body
         const usuarioAtt = await Usuario.update({
-            email: email
+            email
         },
         {
-            where: {
-                id: id
-            }
+            where: { id }
         })
         return res.json(usuarioAtt)
     },
@@ -31,9 +29,7 @@ const usuariosController = {
         const { id } = req.params
         const usuarioDel = await Usuario.destroy(
         {
-            where: {
-                id: id
-            }
+            where: { id }
         })
         return res.json(usuarioDel)
     }
