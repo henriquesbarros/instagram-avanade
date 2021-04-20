@@ -7,9 +7,7 @@ module.exports = async (req, res, next) => {
         res.status(400).json({ erro: "Preencha todos os campos!" })
     } else {
         let user = await Usuario.findAll({
-            where: {
-                email
-            }
+            where: { email }
         })
         if (user.length) {
             res.status(400).json({ erro: "Email já cadastrado!" })
@@ -18,7 +16,7 @@ module.exports = async (req, res, next) => {
                 senha = senha.toString()
             }
             if (senha.length < 6 || senha.length > 12) {
-                res.status(400).json({ erro: "Insira uma senha com mais de 6 dígitos ou menos de 12 dígitos!" })
+                res.status(400).json({ erro: "Insira uma senha com mais de 5 dígitos ou menos de 13 dígitos!" })
             } else {
                 next()
             }
