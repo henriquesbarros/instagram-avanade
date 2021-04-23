@@ -2,8 +2,10 @@ const { Post } = require('../models');
 
 const postsController = {
     index: async (req, res) => {
-        let posts = await Post.findAll()
-        return res.json(posts)
+        let posts = await Post.findAll({
+            include: ['usuario', 'comentarios', 'curtiu']
+        })
+        return res.render('index', { posts })
     },
     show: async (req, res) => {
         let { id } = req.params

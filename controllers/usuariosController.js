@@ -1,18 +1,24 @@
 const { Usuario } = require('../models');
 
 const usuariosController = {
+    login: (req, res) => {
+        return res.render('login')
+    },
     index: async (req, res) => {
         let usuarios = await Usuario.findAll()
         return res.render('usuarios', { usuarios })
     },
+    registro: (req, res) => {
+        return res.render('registro')
+    },
     create: async (req, res) => {
         const { nome, email, senha } = req.body
-        let novoUsuario = await Usuario.create({
+        await Usuario.create({
             nome,
             email,
             senha
         })
-        return res.json(novoUsuario)
+        return res.redirect('/users/login')
     },
     update: async (req, res) => {
         const { id } = req.params

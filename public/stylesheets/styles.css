@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap');
+
+* {
+    padding: 0;
+    border: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #FAFAFA;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.container.spacing-top {
+    margin-top: 10rem;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .login {
+    padding-top: 9.375rem;
+    width: 18.75rem; /* 300px */
+    padding: 2.5rem 1.25rem; /* 40px 20px */
+    border: 1px solid #CCC;
+    border-radius: 0.25rem;
+    margin-left: 6.25rem;
+}
+
+main.container .banner figure img {
+    width: 25rem;
+    margin: 0;
+}
+
+figure img {
+    width: 9.375rem; /* 150px */
+    margin-bottom: 1.5rem;
+}
+
+.container .login fieldset {
+    margin-bottom: 1.5rem;
+}
+
+.container .login input {
+    border: 1px solid #CCC;
+    background-color: #F7F7F7;
+    width: 100%;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+}
+
+.container .login button {
+    width: 100%;
+    background-color: #0095F6;
+    color: white;
+    padding: 0.75rem;
+    border-radius: 0.25rem;
+    transition: 200ms background;
+    cursor: pointer;
+}
+
+.container .login button:hover {
+    background-color: #058de7;
+}
+
+.container .login .cta-cadastro {
+    margin-top: 1.5rem;
+    border-radius: 0.25rem;
+    border: 1px solid #CCC;
+    padding: 1rem;
+}
+
+.container .login form .cta-cadastro p {
+    font-size: 0.75rem;
+    text-align: center;
+}
+
+.container .login div p a {
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/*=== PÁGINA DE REGISTRO ===*/
+
+.container .login .text{
+    margin-top: 1rem;
+}
+
+.container .login form p {
+    text-align: justify;
+    margin-top: 0.75tem;
+    font-size: 0.75rem;
+}
+
+/*=== PÁGINA INDEX ===*/
+
+.container-header {
+    width: 58rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container-header figure img {
+    width: 6rem; /* 103px */
+    height: 2rem; /* 29*/
+    margin: 0;
+}
+
+header {
+    border-bottom: 1px solid #CCC;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+}
+
+header .search input {
+    border: 1px solid #CCC;
+    width: 13.5rem;
+    padding: 0.25rem;
+    text-align: center;
+    border-radius: 0.25rem;
+    background-color: #F7F7F7;
+}
+
+header nav ul {
+    display: flex;
+    align-items: center;
+}
+
+header nav ul li {
+    list-style-type: none;
+}
+
+header nav ul li {
+    margin-left: 1rem;
+}
+
+header nav ul li:nth-child(2) img {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+header nav ul li:nth-child(4) img {
+    width: 2rem;
+    height: 2rem;
+}
+
+/*=== PÁGINA INDEX - POST ===*/
+
+main article {
+    width: 37.5rem;
+    border: 1px solid #CCC;
+    border-radius: 0.25rem;
+    margin-top: 2rem;
+}
+
+article .header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.75rem;
+}
+
+article .header .profile img {
+    margin-bottom: 0;
+}
+
+article .header .profile {
+    display: flex;
+    align-items: center;
+}
+
+article .header .profile p {
+    margin-left: 1rem;
+}
+
+article .header button {
+    background-color: #FAFAFA;
+}
+
+article .header img {
+    width: 2rem;
+    height: 2rem;
+}
+article .post-content figure {
+    width: 100%;
+    height: 30rem;
+}
+
+article .post-content img {
+    width: 100%;
+    height: 30rem;
+    object-fit: cover;
+}
+
+article .post-content .posts-info {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.75rem;
+}
+
+article .post-content .posts-info .likes {
+    display: flex;
+    align-items: center;
+}
+
+article .post-content .posts-info .likes img {
+    margin-right: 0.5rem;
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+article .comments {
+    padding: 0.75rem;
+    border-bottom: 1px solid #CCC;
+}
+
+article .comments ul {
+    list-style-type: none;
+}
+
+article .comments ul p {
+    font-size: 0.875rem;
+    margin-bottom: 0.5rem;
+    color: rgb(83, 83, 83);
+}
+
+article .add-comments {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+article .add-comments button {
+    background-color: #FAFAFA;
+    color: #3825FF;
+    font-weight: 600;
+    cursor: pointer;
+    margin-left: 2rem;
+}
+
+article .add-comments input {
+    width: 100%;
+    background-color: #FAFAFA;
+    font-weight: 500;
+
+}
+
+
+
+
+
+
+
+

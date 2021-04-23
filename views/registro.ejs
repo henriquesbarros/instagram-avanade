@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram | Registrar</title>
+    <link rel="stylesheet" href="/stylesheets/styles.css">
+</head>
+<body>
+    <main class="container spacing-top">
+        <div class="banner">
+            <figure>
+                <img src="/images/banner-login.png" alt="Phone images">
+            </figure>
+        </div>
+        <div class="login">
+            <form action="/users" method="POST">
+                <figure>
+                    <img src="/images/logo.png" alt="Logo instagram">
+                </figure>
+                <fieldset class="name">
+                    <input type="text" name="nome" id="name" placeholder="Nome completo">
+                </fieldset>
+                <fieldset class="email">
+                    <input type="email" name="email" id="email" placeholder="Email">
+                </fieldset>
+                <fieldset class="password">
+                    <input type="password" name="senha" id="password" placeholder="Senha">
+                </fieldset>
+                <fieldset class="password">
+                    <input type="password" name="confirma-senha" id="password" placeholder="Confirme a senha">
+                </fieldset>
+                <button type="submit">Registrar</button>
+                <div class="text">
+                    <p>
+                        Ao se cadastrar, você concorda com nossos 
+                        <strong>
+                            Termos, Política de Dados e Política 
+                            de Cookies
+                        </strong>
+                    </p>
+                </div>
+                
+                <div class="cta-cadastro">
+                    <p>Tem uma conta? <a href="regristro.html">Conecte-se</a></p>
+                </div>
+            </form> 
+        </div>
+    </main>
+</body>
+</html>

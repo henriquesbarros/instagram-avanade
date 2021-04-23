@@ -1,11 +1,77 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-  </body>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram | Login</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+</head>
+<body>
+    <header>
+        <div class="container-header">
+            <figure>
+                <img src="images/logo.png" alt="Logo instagram">
+            </figure>
+            <div class="search">
+                <input type="text" name="" id="" placeholder="Pesquisar">
+            </div>
+            <nav>
+                <ul>
+                    <li><img src="images/icons/home.svg" alt="Home icon"></li>
+                    <li><img src="images/icons/compass-1_icon-icons.com_69400.svg" alt="Home icon"></li>
+                    <li><img src="images/icons/heart.svg" alt="Home icon"></li>
+                    <li><img src="images/avatar-example.png" alt="Home icon"></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="container">
+
+        <section>
+            <% for ( let post of posts ) { %>
+                <article>
+                    <div class="header">
+                        <div class="profile">
+                            <figure>
+                                <img src="images/avatar-example.png" alt="">
+                            </figure>
+                            <p><%= post.usuario.nome %> </p>
+                        </div>
+                        <button><img src="images/icons/three_dots_icon_159804.svg" alt=""></button>
+                    </div>
+                    <div class="post-content">
+                        <figure>
+                            <img src='<%= post.img %>' alt="">
+                        </figure>
+                        <div class="posts-info">
+                            <p><%= post.texto %> </p>
+                            <div class="likes">
+                                <img src="images/icons/heart.svg" alt="Home icon">
+                                <p><%= post.curtiu.length %>  likes</p>
+                            </div>
+                            <span>Postado no dia 16/04/2021</span>
+                        </div>
+                    </div>
+                    <div class="comments">
+                        <ul>
+                            <% for( let comentario of post.comentarios ) { %>
+                                <li>
+                                    <p><%= comentario.texto %></p>
+                                </li>
+                            <% } %>
+                        </ul>
+                    </div>
+                    <div class="add-comments">
+                        <input type="text" name="" id="" placeholder="Adicione um comentário...">
+                        <button type="submit">Publicar</button>
+                    </div>
+                </article>
+            <% } %>
+        </section>
+            
+
+        
+    </main>
+</body>
 </html>
