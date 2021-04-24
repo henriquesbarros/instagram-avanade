@@ -1,8 +1,23 @@
+const bcrypt = require('bcryptjs')
 const { Usuario } = require('../models');
 
 const usuariosController = {
     login: (req, res) => {
         return res.render('login')
+    },
+    auth: async (req, res) => {
+        const { email, senha } = req.body
+        console.log(req.body)
+        const usuario = await Usuario.findOne({
+            where: { email }
+        })
+        console.log(usuario)
+        if (usuario && bcrypt.compareSync(senha, usuario.senha)) {
+            req.session.usuarioLogado = usuario
+            return res.redirect('/posts')
+        } else {
+            return res.redirect('/users/login')
+        }
     },
     index: async (req, res) => {
         let usuarios = await Usuario.findAll()
@@ -13,10 +28,13 @@ const usuariosController = {
     },
     create: async (req, res) => {
         const { nome, email, senha } = req.body
+
+        const senhaCrypt = bcrypt.hashSync(senha, 10)
+
         await Usuario.create({
             nome,
             email,
-            senha
+            senha: senhaCrypt
         })
         return res.redirect('/users/login')
     },
